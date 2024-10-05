@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="start-screen">
+        <h1 class="heading">The ExoExplorers</h1>
+        <div class="setting">
+            <label for="num-questions">Number of Questions</label>
+            <select id="num-questions">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <label for="difficulty">Select Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <label for="category">Select Category</label>
+            <select id="category">
+                <option value="trivia">Trivia</option>
+                <option value="true/false">True/False</option>
+                <option value="fill in the blanks">Fill in the blanks</option>
+                <option value="word link">Word Link</option>
+                <option value="jumble words">Jumble Words</option>
+            </select>
+            <label for="time-limit">Select Time Limit</label>
+            <select id="time-limit">
+                <option value="10">10 sec</option>
+                <option value="15">15 sec</option>
+                <option value="20">20 sec</option>
+            </select>
+        </div>
+        <button class="btn start">Start Quiz</button>
+    </div>
+
+    <div class="quiz hide">
+        <div class="timer">
+            <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text" id="progress-text">-</span>
+            </div>
+        </div>
+        <div class="question-wrapper">
+            <div class="number">
+                Questions <span class="current">1</span><span class="total"></span>
+            </div>
+            <div class="question">This is a question</div>
+            <div class="answer-wrapper"></div>
+            <button class="btn submit" disabled>Submit</button>
+            <button class="btn next hide">Next</button>
+        </div>
+    </div>
+
+    <div class="end-screen hide">
+        <h1 class="heading">Quiz Completed</h1>
+        <div class="score">
+            <span class="score-text">Your score:</span>
+            <div>
+                <span class="final-score">0</span>
+                <span class="total-score">/ 10</span>
+            </div>
+        </div>
+        <button class="btn restart">Restart Quiz</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
